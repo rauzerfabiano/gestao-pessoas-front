@@ -1,4 +1,4 @@
-template>
+<template>
   <form @submit.prevent="updatePessoa">
     <label>Nome: <input v-model="pessoa.nome" required /></label>
     <label>CPF: <input v-model="pessoa.cpf" required /></label>

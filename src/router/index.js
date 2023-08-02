@@ -1,10 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import PessoasList from '@/components/PessoasList.vue';
 import PessoaCreate from '@/components/PessoaCreate.vue';
 import PessoaEdit from '@/components/PessoaEdit.vue';
-
-Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: PessoasList },
@@ -12,6 +9,9 @@ const routes = [
   { path: '/edit/:id', component: PessoaEdit },
 ];
 
-export default new VueRouter({
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
+
+export default router;
