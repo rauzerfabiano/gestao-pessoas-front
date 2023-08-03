@@ -33,8 +33,8 @@
     },
     methods: {
       fetchPessoas() {
-        axios.get('/api/pessoas').then((response) => {
-          this.pessoas = response.data;
+        axios.get('/pessoas').then((response) => {
+          this.pessoas = response.data.data;
         });
       },
       showCreateForm() {

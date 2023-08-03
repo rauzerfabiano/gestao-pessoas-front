@@ -26,15 +26,19 @@
   import axios from 'axios';
   
   export default {
+    name: 'listPessoas',
+    components: {},
     data() {
       return {
         pessoas: [],
+        numeroPessoas: 0,
       };
     },
     methods: {
       fetchPessoas() {
-        axios.get('/api/pessoas').then((response) => {
-          this.pessoas = response.data;
+        axios.get('/pessoas').then((response) => {
+          this.pessoas = response.data.data;
+          this.numeroPessoas = response.data.data.length;
         });
       },
       showCreateForm() {
@@ -44,10 +48,13 @@
         this.$router.push('/edit/' + codigo);
       },
       deletePessoa(codigo) {
-        axios.delete('/api/pessoas/' + codigo).then(() => {
+        axios.delete('/pessoas/' + codigo).then(() => {
           this.fetchPessoas();
         });
       },
+    },
+    mounted() {
+      this.fetchPessoas();
     },
     created() {
       this.fetchPessoas();
