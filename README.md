@@ -1,24 +1,28 @@
-# gestao-pessoas-front
+# Aplicação de Gerenciamento de Pessoas (Front-end)
 
-## Project setup
-```
-npm install
-```
+## Descrição
+Este é o front-end da Aplicação de Gerenciamento de Pessoas, desenvolvido com Vue.js. Ele permite aos usuários visualizar, criar, editar e excluir pessoas, interagindo com a API back-end.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Requisitos
+- Node.js
+- Vue.js
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Instalação
+1. Clone o repositório
+2. Navegue até o diretório do projeto
+3. Execute `npm install` para instalar as dependências
+4. Execute `npm run serve` para iniciar o servidor de desenvolvimento
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Funcionalidades
+- Listagem de Pessoas
+- Criação de Pessoa
+- Edição de Pessoa
+- Exclusão de Pessoa
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Rotas
+- `/`: Lista todas as pessoas
+- `/create`: Formulário para criar uma nova pessoa
+- `/edit/:id`: Formulário para editar uma pessoa existente
+
+## Notas
+Certifique-se de que a API back-end esteja em execução e configurada corretamente para que o front-end possa se comunicar com ela.
